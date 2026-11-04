@@ -1,0 +1,22 @@
+# Delphi local/project-user files
+*.dproj.local
+*.identcache
+*.local
+
+# Delphi build output
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.map
+*.~*
+__history/
+Win32/
+Win64/
+
+# IDE/editor files
+.idea/
+.vs/
+*.suo
+*.user
+*.bak

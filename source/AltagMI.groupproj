@@ -1,0 +1,108 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1C0E7D2-9B64-4F38-8D25-6E7A2B410003}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PI_AltagMI_SelLottiSpecDDT\PI_AltagMI_SelLottiSpecDDT.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="pi_AltagMi_PrevInd\PI_AltagMI_PrevInd.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PI_AltagMI_GstVenLastre\PI_AltagMI_GstVenLastre.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PI_AltagMI_GstPI\PI_AltagMI_GstPI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PI_ALTAGMI_CampiAggRigaComm\PI_AltagMI_CampiAggRigaComm.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PI_AltagMI_BWS\PI_AltagMI_BWS.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PS_AltagMI_DataEntry\PS_AltagMI_DataEntry.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PI_AltagMI_SelLottiSpecDDT">
+        <MSBuild Projects="PI_AltagMI_SelLottiSpecDDT\PI_AltagMI_SelLottiSpecDDT.dproj"/>
+    </Target>
+    <Target Name="PI_AltagMI_SelLottiSpecDDT:Clean">
+        <MSBuild Projects="PI_AltagMI_SelLottiSpecDDT\PI_AltagMI_SelLottiSpecDDT.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PI_AltagMI_SelLottiSpecDDT:Make">
+        <MSBuild Projects="PI_AltagMI_SelLottiSpecDDT\PI_AltagMI_SelLottiSpecDDT.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pi_AltagMi_PrevInd">
+        <MSBuild Projects="pi_AltagMi_PrevInd\PI_AltagMI_PrevInd.dproj"/>
+    </Target>
+    <Target Name="pi_AltagMi_PrevInd:Clean">
+        <MSBuild Projects="pi_AltagMi_PrevInd\PI_AltagMI_PrevInd.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pi_AltagMi_PrevInd:Make">
+        <MSBuild Projects="pi_AltagMi_PrevInd\PI_AltagMI_PrevInd.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstVenLastre">
+        <MSBuild Projects="PI_AltagMI_GstVenLastre\PI_AltagMI_GstVenLastre.dproj"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstVenLastre:Clean">
+        <MSBuild Projects="PI_AltagMI_GstVenLastre\PI_AltagMI_GstVenLastre.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstVenLastre:Make">
+        <MSBuild Projects="PI_AltagMI_GstVenLastre\PI_AltagMI_GstVenLastre.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstPI">
+        <MSBuild Projects="PI_AltagMI_GstPI\PI_AltagMI_GstPI.dproj"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstPI:Clean">
+        <MSBuild Projects="PI_AltagMI_GstPI\PI_AltagMI_GstPI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PI_AltagMI_GstPI:Make">
+        <MSBuild Projects="PI_AltagMI_GstPI\PI_AltagMI_GstPI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PI_ALTAGMI_CampiAggRigaComm">
+        <MSBuild Projects="PI_ALTAGMI_CampiAggRigaComm\PI_AltagMI_CampiAggRigaComm.dproj"/>
+    </Target>
+    <Target Name="PI_ALTAGMI_CampiAggRigaComm:Clean">
+        <MSBuild Projects="PI_ALTAGMI_CampiAggRigaComm\PI_AltagMI_CampiAggRigaComm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PI_ALTAGMI_CampiAggRigaComm:Make">
+        <MSBuild Projects="PI_ALTAGMI_CampiAggRigaComm\PI_AltagMI_CampiAggRigaComm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PI_AltagMI_BWS">
+        <MSBuild Projects="PI_AltagMI_BWS\PI_AltagMI_BWS.dproj"/>
+    </Target>
+    <Target Name="PI_AltagMI_BWS:Clean">
+        <MSBuild Projects="PI_AltagMI_BWS\PI_AltagMI_BWS.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PI_AltagMI_BWS:Make">
+        <MSBuild Projects="PI_AltagMI_BWS\PI_AltagMI_BWS.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PS_AltagMI_DataEntry">
+        <MSBuild Projects="PS_AltagMI_DataEntry\PS_AltagMI_DataEntry.dproj"/>
+    </Target>
+    <Target Name="PS_AltagMI_DataEntry:Clean">
+        <MSBuild Projects="PS_AltagMI_DataEntry\PS_AltagMI_DataEntry.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PS_AltagMI_DataEntry:Make">
+        <MSBuild Projects="PS_AltagMI_DataEntry\PS_AltagMI_DataEntry.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PI_AltagMI_SelLottiSpecDDT;pi_AltagMi_PrevInd;PI_AltagMI_GstVenLastre;PI_AltagMI_GstPI;PI_ALTAGMI_CampiAggRigaComm;PI_AltagMI_BWS;PS_AltagMI_DataEntry"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PI_AltagMI_SelLottiSpecDDT:Clean;pi_AltagMi_PrevInd:Clean;PI_AltagMI_GstVenLastre:Clean;PI_AltagMI_GstPI:Clean;PI_ALTAGMI_CampiAggRigaComm:Clean;PI_AltagMI_BWS:Clean;PS_AltagMI_DataEntry:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PI_AltagMI_SelLottiSpecDDT:Make;pi_AltagMi_PrevInd:Make;PI_AltagMI_GstVenLastre:Make;PI_AltagMI_GstPI:Make;PI_ALTAGMI_CampiAggRigaComm:Make;PI_AltagMI_BWS:Make;PS_AltagMI_DataEntry:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,49 @@
+package PI_AltagMI_BWS;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Funzioni Personalizzate BWS - Debug'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  M_PDT;
+
+contains
+  U_PI_Altag_BWS in 'U_PI_Altag_BWS.pas',
+  U_Altag_BWS in 'U_Altag_BWS.pas',
+  UFraPrepspedOV in 'UFraPrepspedOV.pas' {Fra_PrepspedOV: TFrame},
+  UBarcode in 'UBarcode.pas' {FrmBarcode},
+  UPI_Altag_Spec in 'UPI_Altag_Spec.pas',
+  UFrmCaricaMag in 'UFrmCaricaMag.pas' {FrmCaricaMag},
+  UFrmDetailScarico in 'UFrmDetailScarico.pas' {FrmDetailScarico},
+  UFrmSelLotto in 'UFrmSelLotto.pas' {FrmSelLotto},
+  UFrmDetailCarico in 'UFrmDetailCarico.pas' {FrmDetailCarico},
+  UFrmSelComrig in 'UFrmSelComrig.pas' {FrmComrig},
+  UFrmDettlot in 'UFrmDettlot.pas' {FrmDettLotti};
+
+  {$SetPEFlags $0800}
+end.

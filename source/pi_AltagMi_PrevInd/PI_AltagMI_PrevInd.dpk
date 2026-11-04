@@ -1,0 +1,83 @@
+{
+altag.cfg
+[ssPrevInd]
+DiametroMin=12
+;IDlav=1
+IDlav=249
+IDCAMOVBV=97,53
+IDCAMOVBL=99,55
+IDCAMOVMV=98,54
+IDCAMOVML=0,0
+
+[PrevInd]
+DiametroMin=12
+IDlav=2
+; Id degli utenti abilitati
+UtentiAbilitati=64
+;   IDCAUMOV,IDTIPIDOC     
+IDCAMOVBV=102,53
+IDCAMOVBL=104,59
+IDCAMOVMV=103,58
+IDCAMOVML=105,60
+
+extfun.ini
+[FrmComTes]
+AutoRun=PI_Altag_PrevInd.PlugIn_PrevInd
+[FrmIntCom]
+BUTTONS=PI_Altag_PrevInd.GenerazioneOP
+[PI_Altag_PrevInd]
+cap_GenerazioneOP=Genera O.P.
+
+sam.cfg
+[Moduli]
+PI_Altag_PrevInd=PlugIn Creazione Preventivi Industriali
+
+
+
+
+
+
+
+
+}
+
+package PI_AltagMI_PrevInd;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Plugin Preventivi Industriali'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  M_Prd;
+
+contains
+  UPrevInd in 'UPrevInd.pas',
+  FPrevInd in 'FPrevInd.pas' {FrmPrevInd},
+  Oext_pialtatg in 'Oext_pialtatg.pas';
+
+  {$SetPEFlags $0800}
+end.

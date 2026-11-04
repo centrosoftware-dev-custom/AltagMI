@@ -1,0 +1,235 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{682a0b82-ace5-4e75-b8bb-fb1ae9b3dfc8}</ProjectGuid>
+        <MainSource>PI_AltagMI_CampiAggRigaComm.dpk</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>$(SAMDIROUT)\PI_ALTAGMI_CampiAggRigaComm.bpl</DCC_DependencyCheckOutputName>
+        <FrameworkType>None</FrameworkType>
+        <ProjectVersion>14.4</ProjectVersion>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Package</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX32' and '$(Base)'=='true') or '$(Base_OSX32)'!=''">
+        <Base_OSX32>true</Base_OSX32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX32' and '$(Cfg_2)'=='true') or '$(Cfg_2_OSX32)'!=''">
+        <Cfg_2_OSX32>true</Cfg_2_OSX32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_Optimize>false</DCC_Optimize>
+        <VerInfo_MajorVer>5</VerInfo_MajorVer>
+        <VerInfo_Build>131</VerInfo_Build>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <VerInfo_IncludeVerInfo>True</VerInfo_IncludeVerInfo>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa</DCC_Description>
+        <GenPackage>true</GenPackage>
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa;FileVersion=5.0.0.131;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <GenDll>true</GenDll>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <VerInfo_Locale>1040</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_OSX32)'!=''">
+        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Debugger_HostApplication>$(SAMDIROUT)\SAM.exe</Debugger_HostApplication>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <Debugger_RunParams>-sigapp:A04</Debugger_RunParams>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa - x64;FileVersion=5.0.0.131;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa - x64</DCC_Description>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa;FileVersion=5.0.0.130;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <VerInfo_Build>130</VerInfo_Build>
+        <Version>7.0</Version>
+        <DCC_DebugInformation>False</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_OutputDRCFile>true</DCC_OutputDRCFile>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa - x64;FileVersion=5.0.0.131;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa - x64</DCC_Description>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa - Debug;FileVersion=5.0.0.131;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <VerInfo_Debug>True</VerInfo_Debug>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa - Debug</DCC_Description>
+        <Version>7.0</Version>
+        <DCC_DcuOutput>$(SAMDIROUT)\DCU</DCC_DcuOutput>
+        <DCC_ObjOutput>$(SAMDIROUT)\DCU</DCC_ObjOutput>
+        <DCC_HppOutput>$(SAMDIROUT)\DCU</DCC_HppOutput>
+        <DCC_BplOutput>$(SAMDIROUT)</DCC_BplOutput>
+        <DCC_DcpOutput>$(SAMDIROUT)</DCC_DcpOutput>
+        <DCC_UnitSearchPath>$(SAMDIROUT);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ResourcePath>$(SAMDIROUT);$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>$(SAMDIROUT);$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>$(SAMDIROUT);$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_Optimize>False</DCC_Optimize>
+        <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+        <DCC_RangeChecking>True</DCC_RangeChecking>
+        <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_OSX32)'!=''">
+        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <Debugger_RunParams>-a:CC -u:csadmin -p:</Debugger_RunParams>
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa</DCC_Description>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=Centro Software;FileDescription=ALTAG S.R.L. - Campi aggiuntivi in righe commessa - Debug - x64;FileVersion=5.0.0.131;InternalName=PI_ALTAG_CampiAggRigaComm;LegalCopyright=Centro Software;LegalTrademarks=Centro Software;OriginalFilename=PI_ALTAG_CampiAggRigaComm.bpl;ProductVersion=5.0</VerInfo_Keys>
+        <DCC_Description>ALTAG S.R.L. - Campi aggiuntivi in righe commessa - Debug - x64</DCC_Description>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                    <Parameters Name="HostApplication">$(SAMDIROUT)\SAM.exe</Parameters>
+                    <Parameters Name="RunParams">-sigapp:A04</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">4</VersionInfo>
+                    <VersionInfo Name="MinorVer">2</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">131</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1040</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">Centro Software srl</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">Campi aggiuntivi in righe commessa</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">4.2.0.131</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">PI_ALTAG_CampiAggRigaComm</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">Centro Software srl</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename">PI_ALTAG_CampiAggRigaComm.dproj</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion"/>
+                    <VersionInfoKeys Name="Comments">Ruffaldi Giordano</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\tmsdedxe3.bpl">TMS Component Pack design time support</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\dcldxPScxCommonRS17.bpl">ExpressPrinting System Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\dcldxPSLnksRS17.bpl">ExpressPrinting System ReportLinks (Standard) by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\DclTeeMaker117.bpl">TeeMaker</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\DM_BI.bpl">File $(SAMDIROUT)\DM_BI.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\dcldxmdsRS17.bpl">ExpressMemData by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\dclcxEditorFieldLinkRS17.bpl">ExpressEditors FieldLink by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\dcldxLayoutControlRS17.bpl">ExpressLayout Control by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(SAMDIROUT)\DCSGantt.bpl">.CS GantTime Package DT - Debug</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k170.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp170.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">PI_ALTAG_CampiAggRigaComm.dpk</Source>
+                </Source>
+            </Delphi.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="CSApplication.dcp"/>
+        <DCCReference Include="UPI_CampiAggRigaComm.pas"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
